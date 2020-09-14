@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>구구단 9단 - 2</title>
+    </head>
+
+    <body>
+        <h1>if문 사용해 보기</h1>
+        <p>출력할 단 :</p>
+        <input type="text" id="num" />
+        <button onclick="runGugudan()">확인</button>
+
+        <script>
+            // while, break 무한루프를 통해 원하는 숫자가 입력될때까지 반복 실행
+            function runGugudan() {
+                var strN = document.getElementById('num').value;
+                var n = Number(strN);
+
+                if (n < 2 || n > 9) {
+                    console.log("2 이상 9 이하의 숫자를 입력해 주세요.");
+                } else {
+                    document.write("<h2>" + n + "단</h2>")
+                    for (var i = 1; i <= 9; i++) {
+                        var ret = n * i;
+                        document.write(n + " * " + i + " = " + ret + "<br>");
+                    };
+                }
+            }
+        </script>
+    </body>
+
+</html>
