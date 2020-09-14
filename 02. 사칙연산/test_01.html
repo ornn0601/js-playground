@@ -8,18 +8,18 @@
     </head>
 
     <body>
-        <form name="plus">
-            <input type="text" id="plus_01" />
-            <p>+</p>
-            <input type="text" id="plus_02" />
-            <input type="text" id="plus_03" />
-        </form>
+        <h2>연습문제 1-1</h2>
 
         <script>
-        // 두 수를 입력받아 4칙연산의 결과를 표시해 봅시다.
+            var s1 = prompt("숫자 1을 입력해 주세요.");
+            var s2 = prompt("숫자 2를 입력해 주세요.");
+            var n1 = Number(s1);
+            var n2 = Number(s2);
 
-
-
+            console.log(n1 + " + " + n2 + " = " + (n1 + n2));
+            console.log(n1 + " - " + n2 + " = " + (n1 - n2));
+            console.log(n1 + " * " + n2 + " = " + (n1 * n2));
+            console.log(n1 + " / " + n2 + " = " + (n1 / n2));
         </script>
     </body>
 
