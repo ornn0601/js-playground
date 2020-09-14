@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>구구단 9단 - 1</title>
+    </head>
+
+    <body>
+        <h1>if문 사용해 보기</h1>
+        <script>
+            var strN = prompt("출력할 단을 입력해 주세요.");
+            var n = Number(strN);
+
+            if (n < 2 || n > 9) {
+                console.log("2 이상 9 이하의 숫자를 입력해 주세요.");
+            } else {
+                for (var i = 1; i <= 9; i++) {
+                    var ret = n * i;
+                    document.write(n + " * " + i + " = " + ret + "<br>");
+                };
+            } 
+        </script>
+    </body>
+
+</html>
