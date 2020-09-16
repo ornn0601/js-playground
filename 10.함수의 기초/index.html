@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+
+    <body>
+
+        <script>
+            // 함수의 기초
+            // 매개변수 -> (처리) -> 리턴값의 형태를 가진다.
+
+            // 가독성이 좋아짐
+            // 유지보수를 잘 하게 됨
+
+            // 매개 변수와 리턴을 적극적으로 활용하자
+            // 줄 수가 지나치게 질어지면 함수로 빼자
+            // 인텐트가 지나치게 깊어져도 함수로 빼자
+            // 함수는 반드시 한 가지 일만 하도록 하자.
+
+            var foo = function (x) {
+                var y = 2 * x + 3;
+                return y;
+            }
+
+            // 1단계. 매개변수없고, 리턴도 없는 변수
+            var func1 = function () {
+                console.log("I am func1");
+            }
+            // 함수 호출
+            func1();
+
+            // 2단계 매개변수가 있는 함수
+            var foo2 = function (name) {
+                console.log("hello" + name);
+            }
+            foo2("Euitae");
+
+            // 매개변수 2개 있는 함수
+            var add = function (n1, n2) {
+                console.log(n1 + "+" + n2 + "=" + (n1 + n2));
+            }
+            add(10, 5);
+
+            // (예제)매개변수 2개를 사용하는 함수 만들기
+            var repeat = function (text, num) {
+                for (var i = 0; i < num; i++) {
+                    console.log(i + " : " + text);
+                }
+            }
+            repeat("hello", 5)
+
+            // 3단계. 리턴 값이 있는 함수
+            // 리턴 값이 있을 경우 함수를 호출해서 변수에 값을 넣을 수 있습니다.
+            // 리턴은 한개의 값만 리턴해준다.
+            var five = function () {
+                return 5;
+            };
+            var x = five();
+            console.log(x);
+
+            // 리턴이 없는 경우
+            // 리턴 값이 있어야 변수에 넣을 수 있다.
+            // 없을 경우 undefined를 호출한다.
+            var foo = function () {
+                console.log("I am foo");
+            }
+            foo()
+
+            var x = foo();
+            console.log(x);
+
+            // 아무것도 없는 리턴
+            // 함수를 빠져나갈땐 return (배열을 빠져나갈땐 break)
+            var test1 = function (text) {
+                if (text === "exit") {
+                    return;
+                }
+                console.log("보이나요?");
+            }
+
+            // 이중루프 빠져나가기
+            var fuu = function () {
+                for (var u = 0; u < 1000; u++) {
+                    for (var z = 0; z < 1000; z++) {
+                        console.log(u, z);
+                        if (u === 1 && z === 3) {
+                            return;
+                        }
+                    }
+                }
+            };
+            fuu();
+
+        </script>
+
+    </body>
+
+</html>
