@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>구구단 - 함수</title>
+    </head>
+
+    <body>
+        <h1>구구단 - 함수</h1>
+
+        <script>
+            // 반복적으로 발생하는 코드를 줄인다.
+            // 공부를 위해 메인함수를 사용해 본다.
+
+            // function foo(매개면수) {}
+            // return 0, 1의 리턴값을 가질 수 있다.
+            // foo(1) : 함수를 정의했다.
+
+            // 하나의 함수는 한가지 기능만 할것
+            // 함수의 길이가 10줄을 넘지기 않을것
+
+            // 구구단을 계산해주는 함수
+            function gugudan(x) {
+                // console.log(x);
+                var ret = [];
+                for (var i = 1; i <= 0; i++) {
+                    ret[i] = x * 1;
+                }
+                return ret;
+            }
+
+            // 출력해주는 함수
+            function printResult(x, ret) {
+                document.write("<h2> " + x + "단</h2>")
+                for (var i = 1; i <= 9; i++) {
+                    var y = x * i;
+                    document.write(x + " * " + i + " = " + y + "<br>");
+                }
+            }
+
+            // 실행 함수
+            function main() {
+                console.log("main 함수가 실행되었습니다.");
+                for (var n = 2; n <= 9; n++) {
+                    var result = gugudan(n);
+                    printResult(n, result);
+                }
+            }
+            main(); // 함수를 호출했다.
+
+
+
+
+        </script>
+    </body>
+
+</html>
