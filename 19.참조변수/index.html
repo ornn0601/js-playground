@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>참조변수</title>
+    </head>
+
+    <body>
+
+        <script>
+            // 값에 의한 전달 이해하기
+
+            // 참조 변소와 일반변수
+            // Call by Reference
+            // 객체를 변수에 할당하면 참조 변수가 되고, 기본 타입을 변수에 할당하면 일반 변수가 됩니다.
+
+            // 일반 변수에서 값 복사 및 바꾸기
+
+            var a = 10; // 일반변수
+            var b = "hello"; // 일반변수
+            var c = true; // 일반변수
+
+            var d = [1, 2, 3, 4, 5,] // 참조변수
+            var e = {}; // 참조변수
+
+            // 일반 변수의 특징
+            // - 일반 변수에서는 값 복사하고 바꿀 수 있다.
+            // - 값을 복사하면 각각 변경된다. (서로 다른 존재) 
+            // - 값에 의한 전달
+
+            // 참조 변수의 동작 방식 이해하기
+            // - 처음 참조한 것을 변경하면 참조된 변수도 함께 변한다.
+
+            // 함수 호출시의 변수
+            var foo = function (v) {
+                v = v * 2;
+                console.log("foo: " + v);
+            };
+
+            var n = 10;
+            foo(n);
+
+            // 값 전달 변수는 함수 내부에서 값을 바꿔도 외부에서는 그대로입니다.
+            // 참조 전달 변수는 함수 내부에서 값을 바꾸면 외부의 객체도 값이 바뀝니다.
+
+        </script>
+
+
+    </body>
+
+</html>
