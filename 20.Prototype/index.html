@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Prototype</title>
+    </head>
+
+    <body>
+
+        <script>
+
+            // 클래스들간의 공유하는 속성
+
+            var Human = function (name, atk) {
+                this.name = name;
+                this.hp = 100;
+                this.pow = atk;
+            };
+
+            Human.prototype.attack = function (target) {
+                target.hp -= this.hp;
+            };
+
+            var p1 = new Human("crong", 100);
+            var p2 = new Human("honux", 100);
+
+            // 객체의 속성에 배열이 들어갈 수 있다. 
+            p1.item = ["sword", "shield", "potion"];
+
+            // 배열안에 객체를 넣을 수 있다.
+            var arr = [p1, p2];
+
+            // 참조변수 이기때문에 내용이 변경되면 전부 반영된다.
+            // delete를 사용하면 객체의 속성을 지울 수 있다.
+
+
+
+        </script>
+
+    </body>
+
+</html>
