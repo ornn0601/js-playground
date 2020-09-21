@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>객체와 생성자</title>
+    </head>
+
+    <body>
+
+        <script>
+            var Human = function (name, hp, pow) {
+                this.name = name;
+                this.hp = hp;
+                this.pow = pow;
+                this.attack = function (target) {
+                    console.log(this.name + "가(이) " + target.name + "을 공격했다.");
+                    target.hp -= this.pow;
+                };
+                this.show = function () {
+                    console.log("[%s] %d", this.name, this.hp);
+                }
+
+            }
+
+            var p1 = new Human('의태', 100, 10);
+            var p2 = new Human('셩', 100, 10);
+
+            // "휴먼 클래스에 인스턴스 p1이다." 라고 읽는다.
+            // 객체의 변수는 참조변수이다.
+
+            // 객체 하나만 만들때는 josn표기법
+            // var a = { "name" : "아서스", hp: 9999}
+
+            // 여러개의 만들때는 생성자 함수 사용
+
+            var Food = function (name, energy) {
+                this.name = name;
+                this.energy = energy;
+                this.feed = function (human) {
+                    console.log(this.name + "이 " + human.name + "의 hp를 회복했습니다.");
+                    human.hp += this.energy;
+                };
+            };
+
+            var d = new Food('치킨의신', 30);
+
+        </script>
+
+    </body>
+
+</html>
